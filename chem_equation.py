@@ -12,7 +12,8 @@ class ChemicalEquation:
         self.reactant_coefficients = []
         self.product_coefficients = []
 
-    def __parse_reagent_formula(self, reagent_formula):
+    @staticmethod
+    def __parse_reagent_formula(reagent_formula):
         elements = split('[0-9]+', reagent_formula)
         elements.remove('')
         indexes = split('[A-Za-z]+', reagent_formula)
